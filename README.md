@@ -1,5 +1,10 @@
 # Challenge: Knowledge Validation in Action
 
+## Group 7
+InstanceModel -> turtle files (data)
+Sahpe -> shape models
+
+
 ## Champions
 - Nicholas Nisbet, AEC3 UK Ltd (UK)
 - Mathias Bonduel, Neanex (BE)
