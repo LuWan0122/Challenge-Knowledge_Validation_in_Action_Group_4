@@ -1,0 +1,28 @@
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20201208_005325/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode inst:vav1 ;
+            sh:resultMessage "Value does not have class brick:Zone_Air_Temperature_Sensor" ;
+            sh:resultPath brick:hasPoint ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+            sh:sourceShape [ sh:class brick:Zone_Air_Temperature_Sensor ;
+                    sh:minCount 1 ;
+                    sh:path brick:hasPoint ] ;
+            sh:value inst:setpoint1 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode inst:vav1 ;
+            sh:resultMessage "Value does not have class brick:Zone_Air_Temperature_Setpoint" ;
+            sh:resultPath brick:hasPoint ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+            sh:sourceShape [ sh:class brick:Zone_Air_Temperature_Setpoint ;
+                    sh:minCount 1 ;
+                    sh:path brick:hasPoint ] ;
+            sh:value inst:sensor1 ] .
+

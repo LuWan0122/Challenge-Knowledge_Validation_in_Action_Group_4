@@ -4,7 +4,7 @@
 @prefix brick: <https://brickschema.org/schema/Brick#> .
 
 inst:VAVShape a sh:NodeShape ;
-    sh:targetClass brick:VAV ;
+    sh:targetClass brick:HVAC_Zone ;
     sh:property [
         sh:path brick:hasPoint ;
         sh:minCount 2 ;
