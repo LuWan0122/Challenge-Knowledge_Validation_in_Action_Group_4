@@ -1,0 +1,235 @@
+@prefix bacnet: <http://data.ashrae.org/bacnet/2020#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix bsh: <https://brickschema.org/schema/BrickShape#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtqk: <http://qudt.org/vocab/quantitykind/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix s223: <http://data.ashrae.org/standard223#> .
+@prefix sdo: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix tag: <https://brickschema.org/schema/BrickTag#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20201208_005325/> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20201208_005325/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot:  <https://w3id.org/bot#> .
+@prefix beo:  <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix mep:  <https://pi.pauwel.be/voc/distributionelement#> .
+@prefix props:  <https://w3id.org/props#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+
+inst:site_159
+	a bot:Site ;
+	rdfs:label "Default"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033650f22"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa0pPGyY"^^xsd:string ;
+	bot:hasBuilding inst:building_134 . 
+
+inst:building_134
+	a bot:Building ;
+	rdfs:label "Atlas"^^xsd:string ;
+	rdfs:comment "Atlas"^^xsd:string ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033650f21"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa0pPGyX"^^xsd:string ;
+	bot:hasStorey inst:storey_147 ;
+	bot:hasStorey inst:storey_153 ;
+	props:reference "Atlas Building"^^xsd:string ;
+	props:isExternal false ;
+	props:numberOfStoreys "2"^^xsd:double ;
+	props:isLandmarked ".U."^^xsd:double ;
+	props:aboveGround ".U."^^xsd:double ;
+	props:category "Project Information"^^xsd:string ;
+	props:clientName "Owner"^^xsd:string ;
+	props:projectAddress "Het Eeuwsel 53, 5612 AZ Eindhoven"^^xsd:string ;
+	props:projectIssueDate "Issue Date"^^xsd:string ;
+	props:projectName "Project Name"^^xsd:string ;
+	props:projectNumber "0001"^^xsd:string ;
+	props:projectStatus "Project Status"^^xsd:string . 
+
+inst:storey_147
+	a bot:Storey ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40cc9af1e7"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa3Ccl7d"^^xsd:string ;
+	rdfs:label "8th Floor"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasSpace inst:space_245 , inst:space_404 , inst:space_526 , inst:space_649 , inst:space_772 , inst:space_892 , inst:space_1023 , inst:space_1144 , inst:space_1266 , inst:space_1387 , inst:space_1526 , inst:space_1656 , inst:space_1776 , inst:space_1912 , inst:space_2056 , inst:space_2177 , inst:space_2297 , inst:space_2417 , inst:space_2538 , inst:space_2659 , inst:space_2781 , inst:space_2901 , inst:space_3024 , inst:space_3154 , inst:space_3283 , inst:space_3412 , inst:space_3568 , inst:space_3699 , inst:space_3824 , inst:space_3979 , inst:space_4116 , inst:space_4236 , inst:space_4365 , inst:space_4485 , inst:space_4606 , inst:space_4736 , inst:space_4870 , inst:space_4991 , inst:space_5111 , inst:space_5232 , inst:space_5353 , inst:space_5473 , inst:space_5595 , inst:space_5715 , inst:space_5838 , inst:space_5967 , inst:space_6087 , inst:space_6216 , inst:space_6353 , inst:space_6473 , inst:space_6602 , inst:space_6722 , inst:space_6846 , inst:space_6966 , inst:space_7095 , inst:space_7215 , inst:space_7344 , inst:space_7474 , inst:space_7594 , inst:space_7723 , inst:space_7846 , inst:space_7969 , inst:space_8091 , inst:space_8211 , inst:space_8331 , inst:space_8461 , inst:space_8592 , inst:space_8713 , inst:space_18315 , inst:space_18464 , inst:space_18626 , inst:space_18831 , inst:space_19013 , inst:space_19278 , inst:space_19451 , inst:space_19658 , inst:space_19917 , inst:space_20046 ;
+	bot:containsElement inst:covering_270426 , inst:column_270642 , inst:column_270706 , inst:wall_270788 , inst:wall_271009 , inst:wall_271170 , inst:wall_271267 , inst:wall_271364 , inst:wall_271543 , inst:door_271622 , inst:door_271998 , inst:wall_272195 , inst:wall_272409 , inst:wall_272564 , inst:wall_272719 , inst:column_20973 , inst:column_21121 , inst:column_21185 , inst:column_21249 , inst:column_21313 , inst:column_21377 , inst:column_21463 , inst:column_21539 , inst:column_21603 , inst:column_21667 , inst:column_21731 , inst:column_21795 , inst:column_21859 , inst:column_21923 , inst:column_21987 , inst:column_22051 , inst:column_22115 , inst:column_22179 , inst:column_22243 , inst:column_22307 , inst:column_22393 , inst:column_22469 , inst:column_22533 , inst:column_22597 , inst:column_22661 , inst:column_22725 , inst:column_22789 , inst:column_22853 , inst:column_23005 , inst:column_23081 , inst:column_23171 , inst:column_23269 , inst:column_23345 , inst:column_23409 , inst:column_23473 , inst:column_23537 , inst:column_23601 , inst:column_23665 , inst:column_23729 , inst:column_23793 , inst:column_23879 , inst:column_23955 , inst:column_24019 , inst:column_24083 , inst:column_24147 , inst:column_24211 , inst:column_24275 , inst:column_24339 , inst:column_24403 , inst:column_24467 , inst:column_24531 , inst:column_24595 , inst:column_24718 , inst:column_24794 , inst:column_24858 , inst:column_24922 , inst:column_25008 , inst:column_25084 , inst:column_25148 , inst:column_25234 , inst:column_25310 , inst:column_25374 , inst:column_25438 , inst:column_25502 , inst:column_25566 , inst:column_25630 , inst:column_25694 , inst:column_25758 , inst:column_25822 , inst:column_25908 , inst:column_25984 , inst:column_26048 , inst:column_26134 , inst:column_26233 , inst:column_26309 , inst:column_26395 , inst:column_26471 , inst:column_26535 , inst:column_26599 , inst:column_26663 , inst:column_26727 , inst:column_26791 , inst:column_26855 , inst:column_26919 , inst:column_26983 , inst:column_27047 , inst:column_27111 , inst:column_27175 , inst:column_27239 , inst:column_27303 , inst:column_27367 , inst:column_27431 , inst:column_27495 , inst:column_27559 , inst:column_27623 , inst:column_27709 , inst:column_27785 , inst:column_27849 , inst:column_27913 , inst:column_27999 , inst:column_28075 , inst:column_28139 , inst:column_28203 , inst:column_28267 , inst:curtainWall_28323 , inst:curtainWall_33300 , inst:column_38057 , inst:column_38156 , inst:curtainWall_38224 , inst:curtainWall_47096 , inst:curtainWall_65824 , inst:curtainWall_72641 , inst:wall_91464 , inst:wall_91714 , inst:wall_91875 , inst:wall_92040 , inst:wall_92205 , inst:wall_92366 , inst:wall_92529 , inst:wall_92766 , inst:door_92876 , inst:door_93012 , inst:door_93082 , inst:door_93152 , inst:door_93222 , inst:door_93292 , inst:wall_93446 , inst:wall_93627 , inst:wall_93812 , inst:door_93893 , inst:wall_94085 , inst:wall_94279 , inst:wall_94572 , inst:wall_94749 , inst:wall_94930 , inst:wall_95099 , inst:wall_95308 , inst:wall_95469 , inst:wall_95638 , inst:wall_95799 , inst:wall_95964 , inst:door_96043 , inst:door_96139 , inst:door_96258 , inst:door_96323 , inst:door_96393 , inst:wall_96549 , inst:wall_96728 , inst:wall_96981 , inst:wall_97173 , inst:wall_97466 , inst:wall_97659 , inst:wall_97824 , inst:wall_97985 , inst:wall_98154 , inst:wall_98323 , inst:wall_98532 , inst:wall_98709 , inst:wall_98870 , inst:wall_99051 , inst:wall_99276 , inst:wall_99437 , inst:wall_99678 , inst:wall_99839 , inst:wall_100000 , inst:door_100079 , inst:wall_100238 , inst:slab_100754 , inst:wall_100992 , inst:wall_177426 , inst:wall_177525 , inst:wall_177622 , inst:wall_177719 , inst:wall_177816 , inst:wall_177911 , inst:wall_178006 , inst:wall_178101 , inst:wall_178196 , inst:wall_178291 , inst:wall_178386 , inst:wall_178481 , inst:wall_178576 , inst:wall_178671 , inst:wall_178766 , inst:wall_178861 , inst:wall_178956 , inst:wall_179051 , inst:wall_179146 , inst:wall_179241 , inst:wall_179336 , inst:wall_179431 , inst:stair_179502 , inst:stair_180389 , inst:stair_186759 , inst:stair_187528 , inst:wall_188092 , inst:wall_188261 , inst:wall_188450 , inst:wall_188622 , inst:wall_188787 , inst:wall_188955 , inst:wall_189136 , inst:wall_189297 , inst:wall_189486 , inst:wall_189651 , inst:wall_189844 , inst:wall_190017 , inst:wall_190189 , inst:wall_190394 , inst:wall_190559 , inst:wall_190740 , inst:door_190819 , inst:door_190889 , inst:wall_191041 , inst:door_191120 , inst:wall_193460 , inst:wall_193645 , inst:wall_193813 , inst:wall_193974 , inst:wall_195278 , inst:wall_195439 , inst:wall_195556 , inst:wall_195721 , inst:wall_195878 , inst:wall_196070 , inst:wall_196229 , inst:wall_196326 , inst:door_196405 , inst:wall_197857 , inst:wall_197954 , inst:wall_198051 , inst:wall_198216 , inst:wall_198393 , inst:door_198472 , inst:door_198542 , inst:wall_198692 , inst:wall_198789 , inst:wall_198950 , inst:wall_199129 , inst:wall_199306 , inst:door_199385 , inst:door_199455 , inst:wall_199543 , inst:wall_199640 , inst:wall_199737 , inst:wall_199942 , inst:door_200021 , inst:door_200091 , inst:wall_200179 , inst:curtainWall_200250 , inst:curtainWall_203447 , inst:wall_207500 , inst:curtainWall_207573 , inst:curtainWall_211390 , inst:wall_214355 , inst:door_214434 , inst:wall_214626 , inst:wall_214723 , inst:wall_214820 , inst:wall_215001 , inst:door_215080 , inst:door_215150 , inst:door_215215 , inst:wall_215387 , inst:door_215466 , inst:door_215536 , inst:door_215606 , inst:door_215676 , inst:door_215746 , inst:door_215837 , inst:door_215916 , inst:door_215986 , inst:wall_216074 , inst:door_216153 , inst:wall_216301 , inst:wall_216470 , inst:wall_216659 , inst:wall_216756 , inst:door_216835 , inst:door_216905 , inst:door_216975 , inst:door_217071 , inst:door_217148 , inst:door_217218 , inst:door_217288 , inst:door_217358 , inst:door_217428 , inst:door_217498 , inst:door_217568 , inst:door_217638 , inst:door_217703 , inst:door_217768 , inst:door_217833 , inst:wall_217980 , inst:wall_218141 , inst:wall_218304 , inst:wall_218471 , inst:wall_218736 , inst:door_218815 , inst:door_218885 , inst:door_218955 , inst:door_219025 , inst:wall_219208 , inst:wall_219397 , inst:wall_219566 , inst:wall_219663 , inst:door_219742 , inst:door_219812 , inst:door_219882 , inst:wall_220038 , inst:door_220117 , inst:wall_220205 , inst:wall_220470 , inst:wall_220567 , inst:wall_220664 , inst:wall_220825 , inst:wall_220990 , inst:door_221069 , inst:door_221139 , inst:door_221209 , inst:door_221279 , inst:wall_221367 , inst:wall_221464 , inst:wall_221561 , inst:door_221640 , inst:door_221710 , inst:door_229403 , inst:wall_231746 , inst:wall_231843 , inst:door_231922 , inst:wall_232010 , inst:wall_232163 , inst:door_232242 , inst:door_232312 , inst:door_232382 , inst:wall_233736 , inst:stair_233807 , inst:covering_236713 , inst:covering_236795 , inst:covering_236875 , inst:covering_236955 , inst:covering_237035 , inst:covering_237115 , inst:covering_237195 , inst:covering_237275 , inst:covering_237355 , inst:covering_237435 , inst:covering_237515 , inst:covering_237595 , inst:covering_237675 , inst:covering_237755 , inst:covering_237837 , inst:covering_237917 , inst:covering_237997 , inst:covering_238077 , inst:covering_238157 , inst:covering_238237 , inst:covering_238317 , inst:covering_238397 , inst:covering_238477 , inst:covering_238557 , inst:covering_238637 , inst:covering_238717 , inst:covering_238798 , inst:covering_238878 , inst:covering_238958 , inst:covering_239038 , inst:covering_239118 , inst:covering_239198 , inst:covering_239278 , inst:covering_239358 , inst:covering_243066 , inst:door_244810 , inst:door_244955 , inst:door_245027 ;
+	props:reference "8mm Head"^^xsd:string ;
+	props:aboveGround ".U."^^xsd:double ;
+	props:elevation "0."^^xsd:double ;
+	props:computationHeight "0."^^xsd:double ;
+	props:structural false ;
+	props:buildingStory true ;
+	props:name "8th Floor"^^xsd:string ;
+	props:category "Levels"^^xsd:string ;
+	props:family "Level: 8mm Head"^^xsd:string ;
+	props:familyandType "Level: 8mm Head"^^xsd:string ;
+	props:type "Level: 8mm Head"^^xsd:string ;
+	props:typeId "Level: 8mm Head"^^xsd:string ;
+	props:elevationBase "Project Base Point"^^xsd:string ;
+	props:typeName "8mm Head"^^xsd:string ;
+	props:color "0"^^xsd:double ;
+	props:linePattern "Centre"^^xsd:string ;
+	props:lineWeight "1"^^xsd:string ;
+	props:symbol "M_Level Head - Circle: M_Level Head - Circle"^^xsd:string ;
+	props:symbolatEnd1Default false ;
+	props:symbolatEnd2Default true ;
+	props:category "Levels"^^xsd:string ;
+	props:familyName "Level"^^xsd:string . 
+
+inst:storey_153
+	a bot:Storey ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40cc9af266"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa3Ccl9c"^^xsd:string ;
+	rdfs:label "9th Floor"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasSpace inst:space_8843 , inst:space_8967 , inst:space_9090 , inst:space_9210 , inst:space_9330 , inst:space_9459 , inst:space_9581 , inst:space_9701 , inst:space_9832 , inst:space_9952 , inst:space_10082 , inst:space_10203 , inst:space_10332 , inst:space_10471 , inst:space_10593 , inst:space_10715 , inst:space_10855 , inst:space_10976 , inst:space_11096 , inst:space_11216 , inst:space_11338 , inst:space_11458 , inst:space_11578 , inst:space_11721 , inst:space_11853 , inst:space_11974 , inst:space_12103 , inst:space_12223 , inst:space_12344 , inst:space_12474 , inst:space_12594 , inst:space_12714 , inst:space_12844 , inst:space_12973 , inst:space_13093 , inst:space_13222 , inst:space_13351 , inst:space_13471 , inst:space_13600 , inst:space_13729 , inst:space_13858 , inst:space_13978 , inst:space_14107 , inst:space_14230 , inst:space_14360 , inst:space_14494 , inst:space_14615 , inst:space_14737 , inst:space_14859 , inst:space_14979 , inst:space_15099 , inst:space_15220 , inst:space_15358 , inst:space_15478 , inst:space_15607 , inst:space_15727 , inst:space_15856 , inst:space_15976 , inst:space_16105 , inst:space_16234 , inst:space_16354 , inst:space_16483 , inst:space_16612 , inst:space_16732 , inst:space_16864 , inst:space_16986 , inst:space_17106 , inst:space_17226 , inst:space_17348 , inst:space_17469 , inst:space_17591 , inst:space_17713 , inst:space_18107 , inst:space_20167 , inst:space_20341 , inst:space_20461 , inst:space_20581 , inst:space_20701 , inst:space_20821 ;
+	bot:containsElement inst:door_271692 , inst:door_271762 , inst:door_271832 , inst:door_271902 , inst:slab_100484 , inst:curtainWall_101065 , inst:curtainWall_105436 , inst:curtainWall_130261 , inst:curtainWall_139139 , inst:curtainWall_143559 , inst:curtainWall_168337 , inst:wall_180563 , inst:wall_180722 , inst:wall_180819 , inst:wall_180976 , inst:wall_181073 , inst:wall_181230 , inst:wall_181387 , inst:wall_181756 , inst:door_181835 , inst:wall_181981 , inst:wall_182078 , inst:wall_182239 , inst:wall_182336 , inst:wall_182471 , inst:wall_182568 , inst:wall_182665 , inst:wall_182762 , inst:wall_182919 , inst:wall_183016 , inst:wall_183113 , inst:wall_183210 , inst:door_183289 , inst:wall_183377 , inst:wall_183474 , inst:wall_183571 , inst:wall_183724 , inst:door_183803 , inst:wall_183957 , inst:wall_184054 , inst:wall_184151 , inst:wall_184352 , inst:wall_184449 , inst:wall_184546 , inst:wall_184643 , inst:wall_184820 , inst:wall_184917 , inst:door_184996 , inst:door_185066 , inst:door_185131 , inst:door_185222 , inst:door_185299 , inst:wall_185447 , inst:wall_185544 , inst:wall_185699 , inst:wall_185796 , inst:door_185875 , inst:door_185945 , inst:curtainWall_186009 , inst:curtainWall_186260 , inst:curtainWall_186427 , inst:curtainWall_186594 , inst:curtainWall_187612 , inst:wall_187803 , inst:wall_187900 , inst:wall_191208 , inst:wall_191411 , inst:wall_191508 , inst:wall_191687 , inst:wall_191864 , inst:wall_191961 , inst:wall_192058 , inst:wall_192155 , inst:door_192234 , inst:door_192304 , inst:door_192369 , inst:door_192434 , inst:door_192504 , inst:wall_192592 , inst:wall_192747 , inst:wall_192844 , inst:wall_192941 , inst:wall_193038 , inst:wall_193135 , inst:wall_193288 , inst:door_194053 , inst:wall_194141 , inst:wall_194296 , inst:wall_194393 , inst:wall_194490 , inst:wall_194587 , inst:wall_194684 , inst:wall_194887 , inst:wall_194984 , inst:wall_195081 , inst:wall_196493 , inst:wall_196652 , inst:wall_196749 , inst:wall_196908 , inst:wall_197005 , inst:wall_197166 , inst:wall_197263 , inst:wall_197360 , inst:door_197439 , inst:covering_197567 , inst:door_221780 , inst:wall_221919 , inst:door_221998 , inst:door_222068 , inst:wall_222156 , inst:wall_222253 , inst:door_222332 , inst:door_222402 , inst:wall_222490 , inst:wall_222651 , inst:door_222730 , inst:door_222800 , inst:door_222870 , inst:wall_223234 , inst:wall_223331 , inst:wall_223488 , inst:wall_223645 , inst:wall_223802 , inst:wall_223959 , inst:wall_224056 , inst:wall_224153 , inst:wall_224250 , inst:wall_224347 , inst:wall_224444 , inst:wall_224541 , inst:door_224620 , inst:door_224690 , inst:door_224760 , inst:door_224830 , inst:door_224900 , inst:door_224970 , inst:wall_225114 , inst:door_225193 , inst:door_225263 , inst:door_225333 , inst:wall_225477 , inst:door_225556 , inst:door_225626 , inst:door_225696 , inst:door_225766 , inst:door_225836 , inst:door_225906 , inst:door_225976 , inst:wall_226064 , inst:wall_226217 , inst:wall_226370 , inst:door_226449 , inst:door_226519 , inst:wall_226713 , inst:wall_226810 , inst:wall_226907 , inst:wall_227004 , inst:door_227083 , inst:door_227153 , inst:door_227223 , inst:wall_227311 , inst:wall_227408 , inst:wall_227563 , inst:wall_227660 , inst:door_227739 , inst:wall_227827 , inst:door_227906 , inst:door_227976 , inst:wall_228122 , inst:wall_228219 , inst:door_228298 , inst:door_228363 , inst:wall_228451 , inst:wall_228548 , inst:wall_228645 , inst:wall_228742 , inst:wall_228839 , inst:wall_228936 , inst:wall_229033 , inst:wall_229130 , inst:wall_229227 , inst:wall_229324 , inst:wall_229491 , inst:door_229570 , inst:door_229640 , inst:door_229710 , inst:door_229780 , inst:door_229850 , inst:door_229920 , inst:door_229990 , inst:door_230060 , inst:door_230130 , inst:door_230200 , inst:wall_230562 , inst:door_230641 , inst:door_230711 , inst:door_230781 , inst:wall_230869 , inst:wall_231022 , inst:wall_231119 , inst:wall_231272 , inst:wall_231369 , inst:door_231448 , inst:door_231518 , inst:door_231588 , inst:door_231658 , inst:wall_232470 , inst:curtainWall_232543 , inst:curtainWall_232710 , inst:curtainWall_232877 , inst:curtainWall_233044 , inst:curtainWall_233211 , inst:curtainWall_233378 , inst:curtainWall_233545 , inst:curtainWall_234700 , inst:curtainWall_234867 , inst:curtainWall_235034 , inst:curtainWall_235201 , inst:wall_235450 , inst:door_235529 , inst:door_246787 , inst:wall_246931 , inst:door_247010 , inst:door_247080 , inst:wall_247168 , inst:wall_247321 , inst:door_247400 , inst:wall_247544 , inst:door_247623 , inst:door_247693 , inst:door_247763 , inst:wall_247907 , inst:door_247986 , inst:door_248056 , inst:door_248126 , inst:door_248196 , inst:door_248266 , inst:door_248336 , inst:wall_248480 , inst:door_248559 , inst:door_248629 , inst:door_248699 , inst:wall_248933 ;
+	props:reference "8mm Head"^^xsd:string ;
+	props:aboveGround ".U."^^xsd:double ;
+	props:elevation "3.99999999997774"^^xsd:double ;
+	props:structural false ;
+	props:buildingStory true ;
+	props:name "9th Floor"^^xsd:string ;
+	props:computationHeight "0."^^xsd:double ;
+	props:category "Levels"^^xsd:string ;
+	props:family "Level: 8mm Head"^^xsd:string ;
+	props:familyandType "Level: 8mm Head"^^xsd:string ;
+	props:type "Level: 8mm Head"^^xsd:string ;
+	props:typeId "Level: 8mm Head"^^xsd:string ;
+	props:elevationBase "Project Base Point"^^xsd:string ;
+	props:typeName "8mm Head"^^xsd:string ;
+	props:color "0"^^xsd:double ;
+	props:linePattern "Centre"^^xsd:string ;
+	props:lineWeight "1"^^xsd:string ;
+	props:symbol "M_Level Head - Circle: M_Level Head - Circle"^^xsd:string ;
+	props:symbolatEnd1Default false ;
+	props:symbolatEnd2Default true ;
+	props:category "Levels"^^xsd:string ;
+	props:familyName "Level"^^xsd:string . 
+
+inst:space_892
+	a bot:Space ;
+	bot:hasGuid "1456e859-2e9e-4e70-9341-f073adb2dbb0"^^xsd:string ;
+	props:hasCompressedGuid "0KLkXPBfvES9D1y7Ejijkm"^^xsd:string ;
+	bot:containsElement inst:lightFixture_262256 , inst:lightFixture_262330 , inst:lightFixture_262404 , inst:sensor_239721 , inst:lightFixture_241953 ;
+	props:name "Area_4001"^^xsd:string ;
+	props:isExternal false ;
+	props:reference "Area_4001 6"^^xsd:string ;
+	props:reference "Area_4001 6"^^xsd:string ;
+	props:baseOffset "0."^^xsd:double ;
+	props:limitOffset "0."^^xsd:double ;
+	props:upperLimit "Level: Ceiling 8th Floor"^^xsd:string ;
+	props:level "8th Floor"^^xsd:string ;
+	props:computationHeight "0."^^xsd:double ;
+	props:area "17.140717947478"^^xsd:double ;
+	props:perimeter "16.6970818819323"^^xsd:double ;
+	props:unboundedHeight "3.84999999997375"^^xsd:double ;
+	props:actualLightingLoadperarea "0."^^xsd:double ;
+	props:actualPowerLoadperarea "0."^^xsd:double ;
+	props:baseLightingLoadon "By Space Type"^^xsd:string ;
+	props:basePowerLoadon "By Space Type"^^xsd:string ;
+	props:heatLoadValues "By Space Type"^^xsd:string ;
+	props:lightingLoadUnits "Power Density"^^xsd:string ;
+	props:numberofPeople "0."^^xsd:double ;
+	props:powerLoadUnits "Power Density"^^xsd:string ;
+	props:actualLightingLoad "0."^^xsd:double ;
+	props:actualPowerLoad "0."^^xsd:double ;
+	props:areaperPerson "28.5714285714286"^^xsd:double ;
+	props:latentHeatGainperperson "58.6142140344444"^^xsd:double ;
+	props:plenumLightingContribution "0.2"^^xsd:double ;
+	props:sensibleHeatGainperperson "73.2677675430556"^^xsd:double ;
+	props:specifiedLightingLoad "0."^^xsd:double ;
+	props:specifiedLightingLoadperarea "10.7639104167097"^^xsd:double ;
+	props:specifiedPowerLoad "0."^^xsd:double ;
+	props:specifiedPowerLoadperarea "13.9930835417226"^^xsd:double ;
+	props:totalHeatGainperperson "131.8819815775"^^xsd:double ;
+	props:comments "Meeting Room"^^xsd:string ;
+	props:name "Area_4001"^^xsd:string ;
+	props:number "6"^^xsd:string ;
+	props:category "Rooms"^^xsd:string ;
+	props:phaseId "New Construction"^^xsd:string ;
+	props:phase "New Construction"^^xsd:string ;
+	props:netFloorArea "17.140717947478"^^xsd:double ;
+	props:height "3.84999999997375"^^xsd:double ;
+	props:grossPerimeter "54.7804523685442"^^xsd:double ;
+	props:grossFloorArea "17.140717947478"^^xsd:double ;
+	props:grossVolume "65.9917640973406"^^xsd:double . 
+
+inst:08BEAC0A1C04_Edimax a brick:Sensor ;
+  rdfs:label "EDIMAX air quality sensor";
+  rdfs:seeAlso "https://www.edimax.com/edimax/mw/cufiles/files/download/datasheet/AirBox_AI-1001W_V2_Datasheet_English.pdf" ;
+  brick:hasPoint 
+    inst:08BEAC0A1C04_Edimax_co2,
+	inst:08BEAC0A1C04_Edimax_co,
+    inst:08BEAC0A1C04_Edimax_h,
+    inst:08BEAC0A1C04_Edimax_pm25,
+	inst:08BEAC0A1C04_Edimax_pm10,
+    inst:08BEAC0A1C04_Edimax_tvoc,
+	inst:08BEAC0A1C04_Edimax_hcho,
+    inst:08BEAC0A1C04_Edimax_t ;
+  brick:hasLocation inst:space_892 ;
+  brick:timeseries [
+        brick:hasTimeseriesId   "edimax/08BEAC0A1C04/pub" ;
+        brick:storedAt "mongodb://root:example@localhost:27017/bim-sim" ;
+    ] .
+
+inst:hvac_zone1 a brick:HVAC_Zone ;
+    brick:hasPart inst:space_892 .
+
+
+inst:sensor1    a   brick:Zone_Air_Temperature_Sensor ;
+    brick:hasUnit unit:DEG_C ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "8f541ba4-c437-43ba-ba1d-5c946583fe54" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+
+inst:sensor2    a   brick:Zone_Air_Temperature_Sensor ;
+    brick:hasUnit unit:DEG_C ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+inst:sensor3    a   brick:Zone_Air_Humidity_Sensor ;
+    brick:hasUnit unit:PERCENTAGE ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+inst:setpoint1 a brick:Zone_Air_Temperature_Setpoint .
+
+inst:vav1 a brick:VAV ;
+    brick:feeds inst:hvac_zone1 ;
+    brick:hasPoint inst:sensor1,
+        inst:setpoint1 .
+
+inst:database   a   ref:Database ;
+    rdfs:label  "Postgres Timeseries Storage" ;
+    inst:connstring "mongodb://1.2.3.4/data" ;
+.
