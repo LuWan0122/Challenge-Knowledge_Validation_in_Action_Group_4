@@ -33,6 +33,51 @@
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 
+
+inst:hvac_zone1 a brick:HVAC_Zone ;
+    brick:hasPart inst:space_892 .
+
+
+inst:sensor1    a   brick:Zone_Air_Temperature_Sensor ;
+    brick:hasUnit unit:DEG_C ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "8f541ba4-c437-43ba-ba1d-5c946583fe54" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+
+inst:sensor2    a   brick:Zone_Air_Temperature_Sensor ;
+    brick:hasUnit unit:DEG_C ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+inst:sensor3    a   brick:Zone_Air_Humidity_Sensor ;
+    brick:hasUnit unit:PERCENTAGE ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+inst:setpoint1 a brick:Zone_Air_Temperature_Setpoint .
+
+inst:vav1 a brick:VAV ;
+    brick:feeds inst:hvac_zone1 ;
+    brick:hasPoint inst:sensor1,
+        inst:setpoint1 .
+
+inst:database   a   ref:Database ;
+    rdfs:label  "Postgres Timeseries Storage" ;
+    inst:connstring "mongodb://1.2.3.4/data" ;
+.
+
 inst:site_159
 	a bot:Site ;
 	rdfs:label "Default"^^xsd:string ;
@@ -189,47 +234,3 @@ inst:08BEAC0A1C04_Edimax a brick:Sensor ;
         brick:hasTimeseriesId   "edimax/08BEAC0A1C04/pub" ;
         brick:storedAt "mongodb://root:example@localhost:27017/bim-sim" ;
     ] .
-
-inst:hvac_zone1 a brick:HVAC_Zone ;
-    brick:hasPart inst:space_892 .
-
-
-inst:sensor1    a   brick:Zone_Air_Temperature_Sensor ;
-    brick:hasUnit unit:DEG_C ;
-    ref:hasExternalReference [
-        a ref:TimeseriesReference ;
-        ref:hasTimeseriesId   "8f541ba4-c437-43ba-ba1d-5c946583fe54" ;
-        ref:storedAt  inst:database ;
-    ] ;
-.
-
-
-inst:sensor2    a   brick:Zone_Air_Temperature_Sensor ;
-    brick:hasUnit unit:DEG_C ;
-    ref:hasExternalReference [
-        a ref:TimeseriesReference ;
-        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
-        ref:storedAt  inst:database ;
-    ] ;
-.
-
-inst:sensor3    a   brick:Zone_Air_Humidity_Sensor ;
-    brick:hasUnit unit:PERCENTAGE ;
-    ref:hasExternalReference [
-        a ref:TimeseriesReference ;
-        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
-        ref:storedAt  inst:database ;
-    ] ;
-.
-
-inst:setpoint1 a brick:Zone_Air_Temperature_Setpoint .
-
-inst:vav1 a brick:VAV ;
-    brick:feeds inst:hvac_zone1 ;
-    brick:hasPoint inst:sensor1,
-        inst:setpoint1 .
-
-inst:database   a   ref:Database ;
-    rdfs:label  "Postgres Timeseries Storage" ;
-    inst:connstring "mongodb://1.2.3.4/data" ;
-.

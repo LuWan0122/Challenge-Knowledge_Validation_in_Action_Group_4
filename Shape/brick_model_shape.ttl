@@ -1,2 +1,11 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20201208_005325/> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+
+inst:VAVShape a sh:NodeShape ;
+    sh:targetClass brick:VAV ;
+    sh:property [
+        sh:path brick:hasPoint ;
+        sh:minCount 2 ;
+    ] .
