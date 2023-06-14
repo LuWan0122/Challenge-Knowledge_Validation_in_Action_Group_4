@@ -30,7 +30,8 @@ Specification = Group(ident('ShapeName') + Suppress(':') + Suppress('Every') + i
 
 SpecificationList = OneOrMore(Specification)
 #
-def write_shacl(parsing_result):
+def write_shacl(string):
+    parsing_result = SpecificationList.parse_string(string)
     def translatePropertyShape(prop_shape,inverse=False,dataproperty=False):
         if not inverse:
             t = f"""
@@ -81,13 +82,10 @@ inst:{specification['ShapeName']} a sh:NodeShape ;
     return s
 
 if __name__ == '__main__':
-    test_1 = [
-        """R1 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2.
-        R2 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2."""]
+    test_1 = """R1 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2.
+        R2 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2."""
 
-    for test in test_1:
-        spec = SpecificationList.parse_string(test)
-        print(spec)
-        print(write_shacl(spec))
+
+    print(write_shacl(test_1))
 
 
