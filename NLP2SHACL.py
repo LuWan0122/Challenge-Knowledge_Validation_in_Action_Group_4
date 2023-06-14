@@ -23,8 +23,8 @@ datatypes = {'positiveInteger':'xsd:positiveInteger',
 ident = Word(alphanums + "_$")
 
 
-requirement = Optional(Word('have') + Suppress(White(" ")))('dataproperty') + ident('TargetPath') + Optional(Word('by'))('inverse') + Optional(Suppress('at least') + pyparsing_common.integer('minInclusive')) \
-              + Optional(Suppress(','))+ Optional(Suppress('maximum of') + pyparsing_common.integer('maxInclusive')) + Optional(ident('SubjectType')) + Optional(Suppress('and'))
+requirement = Optional(Word('have') + Suppress(White(" ")))('dataproperty') + ident('TargetPath') + Optional(Word('by'))('inverse') + Optional(Suppress('at least') + pyparsing_common.integer('minCount')) \
+              + Optional(Suppress(','))+ Optional(Suppress('maximum of') + pyparsing_common.integer('maxCount')) + Optional(ident('SubjectType')) + Optional(Suppress('and'))
 
 Specification = Group(ident('ShapeName') + Suppress(':') + Suppress('Every') + ident('TargetClass') + Suppress('should') + OneOrMore(Group(requirement)) + Suppress('.'))
 
@@ -82,8 +82,9 @@ inst:{specification['ShapeName']} a sh:NodeShape ;
     return s
 
 if __name__ == '__main__':
-    test_1 = """R1 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2.
-        R2 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2."""
+    test_1 = """R1 : Every VAV should hasPoint at least 1 Zone_Air_Temperature_Sensor and hasPoint at least 1 Zone_Air_Temperature_Setpoint.
+        R2 : Every HVAC_Zone should feeds by at least 1 VAV.
+        R3 : Every HVAC_Zone should hasPoint at least 2."""
 
 
     print(write_shacl(test_1))
