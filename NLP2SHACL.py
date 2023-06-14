@@ -23,8 +23,8 @@ datatypes = {'positiveInteger':'xsd:positiveInteger',
 ident = Word(alphanums + "_$")
 
 
-requirement = Optional(Word('have') + Suppress(White(" ")))('dataproperty') + ident('TargetPath') + Optional(Word('by'))('inverse') + Optional(Suppress('at least') + pyparsing_common.integer('minInclusive')) \
-              + Optional(Suppress(','))+ Optional(Suppress('maximum of') + pyparsing_common.integer('maxInclusive')) + Optional(ident('SubjectType')) + Optional(Suppress('and'))
+requirement = Optional(Word('have') + Suppress(White(" ")))('dataproperty') + ident('TargetPath') + Optional(Word('by'))('inverse') + Optional(Suppress('at least') + pyparsing_common.integer('minCount')) \
+              + Optional(Suppress(','))+ Optional(Suppress('maximum of') + pyparsing_common.integer('maxCount')) + Optional(ident('SubjectType')) + Optional(Suppress('and'))
 
 Specification = Group(ident('ShapeName') + Suppress(':') + Suppress('Every') + ident('TargetClass') + Suppress('should') + OneOrMore(Group(requirement)) + Suppress('.'))
 
