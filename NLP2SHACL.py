@@ -82,8 +82,8 @@ inst:{specification['ShapeName']} a sh:NodeShape ;
     return s
 
 if __name__ == '__main__':
-    test_1 = """R1 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2.
-        R2 : Every Blablabla should hasPoint by at least 2 ZoneTemperatureSensor and TestName at least 2 TargetClass2."""
+    test_1 = """R1 : Every VAV should hasPoint by at least 1 Zone_Air_Temperature_Sensor and hasPoint at least 1 Zone_Air_Temperature_Setpoint.
+        R2 : Every HVAC_Zone should feeds by at least 1 VAV."""
 
 
     print(write_shacl(test_1))
