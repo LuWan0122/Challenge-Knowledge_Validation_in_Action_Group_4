@@ -1,0 +1,96 @@
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20201208_005325/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot:  <https://w3id.org/bot#> .
+@prefix beo:  <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix mep:  <https://pi.pauwel.be/voc/distributionelement#> .
+@prefix props:  <https://w3id.org/props#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+
+inst:hvac_zone1 a brick:HVAC_Zone ;
+    brick:hasPart inst:space_892 .
+
+inst:vav1 a brick:VAV ;
+    brick:feeds inst:hvac_zone1 ;
+    brick:hasPoint 
+	inst:sensor1,
+    inst:setpoint1 .
+
+inst:setpoint1 a brick:Zone_Air_Temperature_Setpoint .
+
+inst:sensor1    a   brick:Zone_Air_Temperature_Sensor ;
+    brick:hasUnit unit:DEG_C ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "8f541ba4-c437-43ba-ba1d-5c946583fe54" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+inst:sensor2    a   brick:Zone_Air_Temperature_Sensor ;
+    brick:hasUnit unit:DEG_C ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+
+inst:sensor3    a   brick:Zone_Air_Humidity_Sensor ;
+    brick:hasUnit unit:PERCENTAGE ;
+    ref:hasExternalReference [
+        a ref:TimeseriesReference ;
+        ref:hasTimeseriesId   "38b5fa0e-407e-4a23-8800-6ec4f6d60785" ;
+        ref:storedAt  inst:database ;
+    ] ;
+.
+	
+inst:sensor4 a brick:Zone_Air_Temperature_Sensor .
+
+inst:database   a   ref:Database ;
+    rdfs:label  "Postgres Timeseries Storage" ;
+    inst:connstring "mongodb://1.2.3.4/data" ;
+.
+
+inst:site_159
+	a bot:Site ;
+	rdfs:label "Default"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033650f22"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa0pPGyY"^^xsd:string ;
+	bot:hasBuilding inst:building_134 . 
+
+inst:building_134
+	a bot:Building ;
+	rdfs:label "Atlas"^^xsd:string ;
+	rdfs:comment "Atlas"^^xsd:string ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a4033650f21"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa0pPGyX"^^xsd:string ;
+	bot:hasStorey inst:storey_147 ;
+	bot:hasStorey inst:storey_153 .
+
+inst:storey_147
+	a bot:Storey ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40cc9af1e7"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa3Ccl7d"^^xsd:string ;
+	rdfs:label "8th Floor"^^xsd:string ;
+	rdfs:comment ""^^xsd:string ;
+	bot:hasSpace inst:space_892 .
+
+inst:storey_153
+	a bot:Storey ;
+	bot:hasGuid "90b511b9-b7c0-465c-8e11-4a40cc9af266"^^xsd:string ;
+	props:hasCompressedGuid "2GjH6vjy16N8uHIa3Ccl9c"^^xsd:string ;
+	rdfs:label "9th Floor"^^xsd:string . 
+
+inst:space_892
+	a bot:Space ;
+	bot:hasGuid "1456e859-2e9e-4e70-9341-f073adb2dbb0"^^xsd:string ;
+	props:hasCompressedGuid "0KLkXPBfvES9D1y7Ejijkm"^^xsd:string ;
+	bot:containsElement inst:lightFixture_262256 , inst:lightFixture_262330 . 

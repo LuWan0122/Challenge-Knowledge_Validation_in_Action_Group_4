@@ -4,15 +4,15 @@
 @prefix brick: <http://example.com/brick#> . 
 @prefix inst: <http://linkedbuildingdata.net/ifc/resources20201208_005325/> .
 
-inst:HVAC_ZoneShape a sh:NodeShape ; 
-    sh:targetClass brick:HVAC_Zone ; 
+inst:VAVShape a sh:NodeShape ; 
+    sh:targetClass brick:VAV ; 
     sh:property [ 
         sh:path brick:hasPoint ; 
         sh:minCount 1 ; 
-        sh:class brick:ZoneTemperatureSensor ; 
+        sh:class brick:Zone_Air_Temperature_Sensor ; 
         ] ;
     sh:property [ 
         sh:path brick:hasPoint ; 
         sh:minCount 1 ; 
-        sh:class brick:ZoneTemperatureSetPoint ; 
+        sh:class brick:Zone_Air_Temperature_SetPoint ; 
         ] .
